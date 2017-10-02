@@ -1,24 +1,23 @@
 import { connect } from 'react-redux';
-import { addMessage, addCorrespondent, registerUser } from '../reducers/actions';
-import Mailbox from '../components/mailbox';
+import { addResponse, removeResonse, getResonses } from '../reducers/actions';
+import App from '../App.js';
 
 const mapStateToProps = (state, ownProps) => {
-    const correspondents = state.correspondents;
     return {
-        correspondents
+        responses: state
     };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        addCorrespondent: (correspondent) => {
-            dispatch(addCorrespondent(correspondent));
+        addResponse: (correspondent) => {
+            dispatch(addResponse(correspondent));
         },
-        addMessage: (messageData) => {
-            dispatch(addMessage(messageData.id, messageData.message));
+        removeResonse: (id) => {
+            dispatch(removeResonse(id));
         },
-        registerUser: (user) => {
-            dispatch(registerUser(user));
+        getResonses: () => {
+            dispatch(getResonses());
         }
     };
 };
@@ -26,6 +25,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const CorrespondenceManager = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Mailbox);
+)(App);
 
 export default CorrespondenceManager;
