@@ -7,7 +7,7 @@ class App extends Component {
   render() {
 
     const responses = this.props.responses.map((response) => {
-       return <Response data={ response } removeResponse={ () => { this.props.removeResponse(response.id) }}/>
+       return <Response data={ response } action={ () => { this.props.removeResponse(response.id) }}/>
     });
     return (
       <div className="App">

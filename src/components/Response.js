@@ -4,11 +4,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                {this.props.}
-                <button onClick={ this.props.removeResponse }>Remove</button>
+                {this.props.data.text}
+                <button onClick={ this.props.action }>Remove</button>
             </div>
         );
     }
 }
 
-export default App;
+export default App

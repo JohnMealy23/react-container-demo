@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { addResponse, removeResonse, getResonses } from '../reducers/actions';
 import App from '../App.js';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state = [], ownProps) => {
     return {
         responses: state
     };
@@ -13,11 +13,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         addResponse: (correspondent) => {
             dispatch(addResponse(correspondent));
         },
-        removeResonse: (id) => {
-            dispatch(removeResonse(id));
-        },
         getResonses: () => {
             dispatch(getResonses());
+        },
+        removeResonse: (id) => {
+            dispatch(removeResonse(id));
         }
     };
 };
