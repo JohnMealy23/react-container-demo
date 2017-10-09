@@ -4,11 +4,14 @@ import Response from './Response';
 
 class App extends Component {
   render() {
+
     const responses = this.props.responses.map((response, i) => {
        return <Response key={ i } data={ response } action={ () => { this.props.removeResponse(response.id) }}/>
     });
     return (
-      <div className="App">
+      <div className="App" style={{
+          padding: '10px'
+      }}>
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>

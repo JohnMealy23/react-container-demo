@@ -5,12 +5,13 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { createStore, combineReducers } from 'redux';
 
-
 import response from './reducers/demo-reducer';
 import AppContainer from './containers/demo-container';
 import './index.css';
 
-const reducer = combineReducers({response});
+const reducer = combineReducers({
+    response
+});
 const store = createStore(reducer);
 
 ReactDOM.render(

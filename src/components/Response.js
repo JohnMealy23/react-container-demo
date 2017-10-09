@@ -5,6 +5,7 @@ class App extends Component {
         return (
             <div>
                 {this.props.data.text}
+                &nbsp;
                 <button onClick={ this.props.action }>Remove</button>
             </div>
         );

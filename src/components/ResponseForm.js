@@ -10,9 +10,12 @@ class ResponseForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{
+                margin: '10px'
+            }}>
                 <input type="text" onKeyUp={this.updateState}/>
-                <button onClick={() => { this.props.addResponse(this.state.input) }}></button>
+                &nbsp;
+                <button onClick={() => { this.props.addResponse(this.state.input) }}>Submit</button>
             </div>
         );
     }
