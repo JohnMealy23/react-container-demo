@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { addResponse, removeResonse, getResonses } from '../reducers/actions';
-import App from '../App.js';
+import { addResponse, removeResponse } from '../actions';
+import App from '../components/App.js';
 
 const mapStateToProps = (state = [], ownProps) => {
     return {
@@ -13,18 +13,15 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         addResponse: (correspondent) => {
             dispatch(addResponse(correspondent));
         },
-        getResonses: () => {
-            dispatch(getResonses());
-        },
-        removeResonse: (id) => {
-            dispatch(removeResonse(id));
+        removeResponse: (id) => {
+            dispatch(removeResponse(id));
         }
     };
 };
 
-const CorrespondenceManager = connect(
+const AppContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(App);
 
-export default CorrespondenceManager;
+export default AppContainer;

@@ -1,8 +1,8 @@
-import { ADD_RESPONSE, REMOVE_RESPONSE } from './actions';
+import { ADD_RESPONSE, REMOVE_RESPONSE } from '../actions';
 
 const initialState = [];
 
-function user(state = initialState, action) {
+function response(state = initialState, action) {
     switch (action.type) {
         case ADD_RESPONSE:
             state.push(action.response);
@@ -19,4 +19,4 @@ function user(state = initialState, action) {
     }
 }
 
-export default user;
+export default response;
