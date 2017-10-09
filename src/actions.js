@@ -8,3 +8,7 @@ export function removeResponse(id) {
 export function addResponse(text) {
     return { type: ADD_RESPONSE, text }
 }
+
+/**
+ * Add header action here
+ */
