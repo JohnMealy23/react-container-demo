@@ -10,7 +10,8 @@ import response from './reducers/demo-reducer';
 import AppContainer from './containers/demo-container';
 import './index.css';
 
-const store = createStore(response);
+const reducer = combineReducers({response});
+const store = createStore(reducer);
 
 ReactDOM.render(
     <Provider store={ store }>

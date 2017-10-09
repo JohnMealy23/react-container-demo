@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
 class ResponseForm extends Component {
+    constructor(props) {
+        super(props);
+        this.updateState = this.updateState.bind(this);
+    }
+    updateState(e) {
+        this.setState({input: e.target.value})
+    }
     render() {
         return (
             <div>
-                <input type="text" onMouseUp={(e) => { this.setState({input: e.value})}}/>
-                <button onClick={this.props.addResponse}></button>
+                <input type="text" onKeyUp={this.updateState}/>
+                <button onClick={() => { this.props.addResponse(this.state.input) }}></button>
             </div>
         );
     }

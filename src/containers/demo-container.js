@@ -4,14 +4,14 @@ import App from '../components/App.js';
 
 const mapStateToProps = (state = [], ownProps) => {
     return {
-        responses: state
+        responses: state.response
     };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        addResponse: (correspondent) => {
-            dispatch(addResponse(correspondent));
+        addResponse: (text) => {
+            dispatch(addResponse(text));
         },
         removeResponse: (id) => {
             dispatch(removeResponse(id));
