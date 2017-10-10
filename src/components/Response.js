@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class Response extends Component {
     render() {
         return (
             <div>
                 {this.props.data.text}
                 &nbsp;
-                <button onClick={ this.props.action }>Remove</button>
+                <button onClick={ this.props.removeResponse }>Remove</button>
             </div>
         );
     }
 }
 
-export default App
+export default Response;

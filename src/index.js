@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 
 import response from './reducers/demo-reducer';
-import AppContainer from './containers/demo-container';
+import ResponsesContainer from './containers/responses';
 import './index.css';
 
 const reducer = combineReducers({
@@ -16,7 +16,7 @@ const store = createStore(reducer);
 
 ReactDOM.render(
     <Provider store={ store }>
-        <AppContainer />
+        <ResponsesContainer />
     </Provider>,
     document.getElementById('root')
 );

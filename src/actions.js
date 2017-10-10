@@ -10,5 +10,5 @@ export function addResponse(text) {
 }
 
 /**
- * Add header action here
+ * How about adding the header action here?
  */
