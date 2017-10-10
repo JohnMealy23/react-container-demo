@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class ResponseForm extends Component {
+class ResponseForm extends PureComponent {
     constructor(props) {
         super(props);
         this.updateState = this.updateState.bind(this);
@@ -9,7 +9,7 @@ class ResponseForm extends Component {
         // Not interested in keeping every keystroke in the redux store,
         // so we'll keep it in the React state, until the user sees fit
         // to submit it.
-        this.setState({input: e.target.value})
+        this.setState({input: e.target.value});
     }
     render() {
         return (

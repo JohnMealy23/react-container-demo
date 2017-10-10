@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Response extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.data.text}
-                &nbsp;
-                <button onClick={ this.props.removeResponse }>Remove</button>
-            </div>
-        );
-    }
+const Response = (props) => {
+    return (
+        <div>
+            {props.data.text}
+            &nbsp;
+            <button onClick={ props.removeResponse }>Remove</button>
+        </div>
+    );
 }
 
 export default Response;
