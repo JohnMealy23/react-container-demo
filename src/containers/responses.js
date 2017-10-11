@@ -2,21 +2,18 @@ import { connect } from 'react-redux';
 import { addResponse, removeResponse } from '../actions';
 import App from '../components/App.js';
 
+/**
+ * mapStateToProps
+ */
 const mapStateToProps = (state = []) => {
     return {
         responses: state.response
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addResponse: (text) => {
-            dispatch(addResponse(text));
-        },
-        removeResponse: (id) => {
-            dispatch(removeResponse(id));
-        }
-    };
+const mapDispatchToProps = {
+    addResponse,
+    removeResponse
 };
 
 const AppContainer = connect(

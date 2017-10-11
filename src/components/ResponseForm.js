@@ -16,7 +16,12 @@ class ResponseForm extends PureComponent {
             <div style={{
                 margin: '10px'
             }}>
-                <input type="text" onKeyUp={this.updateState}/>
+                <input
+                    type="text"
+                    onKeyUp={this.updateState}
+                    ref={(input) => { this.textInput = input; }}
+                />
+
                 &nbsp;
                 <button onClick={() => { this.props.addResponse(this.state.input) }}>Submit</button>
             </div>

@@ -1,5 +1,4 @@
-export const ADD_RESPONSE = 'ADD_RESPONSE';
-export const REMOVE_RESPONSE = 'REMOVE_RESPONSE';
+import { ADD_RESPONSE, REMOVE_RESPONSE } from './action-types.js';
 
 export function removeResponse(id) {
     return { type: REMOVE_RESPONSE, id }

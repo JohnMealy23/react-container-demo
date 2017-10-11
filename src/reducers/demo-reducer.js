@@ -1,4 +1,4 @@
-import { ADD_RESPONSE, REMOVE_RESPONSE } from '../actions';
+import { ADD_RESPONSE, REMOVE_RESPONSE } from '../action-types';
 
 const initialState = [];
 let id = 0;

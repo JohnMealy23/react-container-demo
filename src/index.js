@@ -11,6 +11,7 @@ import './index.css';
 
 const reducer = combineReducers({
     response
+    /* Go ahead and throw your new reducer here */
 });
 const store = createStore(reducer);
 
