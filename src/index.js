@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { createStore, combineReducers } from 'redux';
 
-import response from './reducers/demo-reducer';
+import response from './reducers/response';
 import ResponsesContainer from './containers/responses';
 import './index.css';
 
