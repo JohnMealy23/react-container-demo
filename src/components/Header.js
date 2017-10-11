@@ -17,7 +17,7 @@ class Header extends Component {
                 <h1>{this.props.header}</h1>
                 <input type="text" onKeyUp={this.updateState}/>
                 &nbsp;
-                <button onClick={() => { this.props.addResponse(this.state.input) }}>Submit</button>
+                <button onClick={() => { this.props.addHeader(this.state.input) }}>Submit</button>
             </div>
         );
     }

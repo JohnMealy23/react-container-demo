@@ -19,7 +19,7 @@ class App extends Component {
          * This would be an excellent place to add the <Header/> container.
          */
         <div>
-            <ResponseForm addResponse={ this.props.addHeader }></ResponseForm>
+            <ResponseForm addResponse={ this.props.addResponse }></ResponseForm>
             { responses }
         </div>
       </div>
