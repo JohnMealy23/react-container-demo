@@ -12,6 +12,10 @@ class ResponseForm extends PureComponent {
         this.setState({input: e.target.value});
     }
     render() {
+        const submitHandler = () => {
+            this.props.addResponse(this.state.input)
+            this.textInput.value = '';
+        };
         return (
             <div style={{
                 margin: '10px'
@@ -23,7 +27,7 @@ class ResponseForm extends PureComponent {
                 />
 
                 &nbsp;
-                <button onClick={() => { this.props.addResponse(this.state.input) }}>Submit</button>
+                <button onClick={ submitHandler }>Submit</button>
             </div>
         );
     }
