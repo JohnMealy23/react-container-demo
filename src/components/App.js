@@ -15,11 +15,11 @@ class App extends Component {
       <div className="App" style={{
           padding: '10px'
       }}>
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
+        /**
+         * This would be an excellent place to add the <Header/> container.
+         */
         <div>
-            <ResponseForm addResponse={ this.props.addResponse }></ResponseForm>
+            <ResponseForm addResponse={ this.props.addHeader }></ResponseForm>
             { responses }
         </div>
       </div>
