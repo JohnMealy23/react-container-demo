@@ -16,6 +16,6 @@ const ResponseForm = (props) => {
                 <button onClick={ submitHandler }>Add Response</button>
             </div>
         );
-}
+};
 
 export default ResponseForm;
