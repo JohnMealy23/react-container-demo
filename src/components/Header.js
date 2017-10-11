@@ -14,10 +14,12 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <h1>{this.props.header}</h1>
+                <h1>
+                    {this.props.header}
+                </h1>
                 <input type="text" onKeyUp={this.updateState}/>
                 &nbsp;
-                <button onClick={() => { this.props.addHeader(this.state.input) }}>Submit</button>
+                <button onClick={() => { this.props.addHeader(this.state.input) }}>Add Header</button>
             </div>
         );
     }
