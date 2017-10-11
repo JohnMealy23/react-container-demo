@@ -3,11 +3,12 @@ import React from 'react';
 const Header = (props) => {
     const submitHandler = () => {
         props.addHeader(this.textInput.value);
+        this.textInput.value = '';
     };
     return (
         <div>
             <h1>
-                { props.header }
+                {props.header}
             </h1>
             <input
                 type="text"
@@ -15,7 +16,6 @@ const Header = (props) => {
             />
             &nbsp;
             <button onClick={ submitHandler }>Add Header</button>
-            &nbsp;
         </div>
     );
 }
