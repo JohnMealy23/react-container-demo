@@ -8,6 +8,6 @@ const Response = (props) => {
             <button onClick={ props.removeResponse }>Remove</button>
         </div>
     );
-}
+};
 
 export default Response;

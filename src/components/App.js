@@ -11,13 +11,13 @@ class App extends Component {
     const responses = this.props.responses.map((response, i) => {
        return <Response key={ i } data={ response } removeResponse={ () => { this.props.removeResponse(response.id) }}/>
     });
+    /**
+     * This would be an excellent place to add the <Header/> container.
+     */
     return (
       <div className="App" style={{
           padding: '10px'
       }}>
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
         <div>
             <ResponseForm addResponse={ this.props.addResponse }></ResponseForm>
             { responses }
